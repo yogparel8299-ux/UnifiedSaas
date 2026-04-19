@@ -48,6 +48,7 @@ import { useCompany } from "./context/CompanyContext";
 import { useDialog } from "./context/DialogContext";
 import { loadLastInboxTab } from "./lib/inbox";
 import { shouldRedirectCompanylessRouteToOnboarding } from "./lib/onboarding-route";
+import AgentsPage from "./pages/Agents";
 
 function BootstrapPendingPage({ hasActiveInvite = false }: { hasActiveInvite?: boolean }) {
   return (
@@ -349,6 +350,7 @@ export function App() {
             {boardRoutes()}
           </Route>
           <Route path="*" element={<NotFoundPage scope="global" />} />
+          <Route path="/agents" element={<AgentsPage />} />
         </Route>
       </Routes>
       <OnboardingWizard />
