@@ -2347,6 +2347,17 @@ export function agentRoutes(db: Db) {
       adapterType: agent.adapterType,
     });
   });
+  router.post("/run", async (req, res) => {
+    const result = await runTask({
+      id: "1",
+      name: "test",
+      input: req.body
+    });
 
+    res.json(result);
+  });
+
+  return router;
+}
   return router;
 }
