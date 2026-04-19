@@ -2359,5 +2359,3 @@ export function agentRoutes(db: Db) {
 
   return router;
 }
-  return router;
-}
